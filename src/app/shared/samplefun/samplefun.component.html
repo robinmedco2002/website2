@@ -1,0 +1,140 @@
+<div style="align-content: center; text-align: center;">
+<h2> Some Sample Function check</h2>
+</div>
+
+
+
+<h3> button click alart message show</h3>
+<button (click)="altbtnclick()" class="btn  btn-primary"> Click </button> 
+<br/> <br/>
+
+
+<h3> button click alart message show 2nd Way</h3>
+<button (click)="altbtnclick2  ('Welcome to Creative Design India')" class="btn  btn-primary"> Click </button>
+<br/> <br/>
+
+<h3> button click Text Box message Show on Console (Button Click Function) </h3>
+<input type="text" #box />
+<button (click)="myEvent(box.value)" class="btn  btn-primary"> Click </button>
+<br/> <br/>
+
+<h3> Text Box message Show on View</h3>
+<input type="text" (keyup)="myEvent($event.target.value)" />
+{{myName}}
+
+<h3> button click Text Box message Show on View</h3>
+<input type="text" #box3 />
+<button (click)="myEvent(box3.value)" class="btn  btn-primary"> Click </button>
+{{myName}}
+<br/><hr/>
+
+<h3> *ngIF or else</h3>
+<h2 *ngIf = "show == 'false' else elseshow">
+    This messahe show ngIf and else -- If Messgae
+</h2>
+<ng-template #elseshow>
+    <h2> This messahe show ngIf and else -- Else Message </h2>
+</ng-template>
+<hr/>
+
+
+<h2> ngIf if else Multiplr colour choose</h2>
+<ng-template [ngIf]="show2=='red'">
+    <h2 style="color: red;" > This is Red Color Show </h2>
+</ng-template>
+
+<ng-template [ngIf]="show2=='green'">
+    <h2 style="color: green;" > This is Green Color Show </h2>
+</ng-template>
+
+<ng-template [ngIf]="show2=='blue'">
+    <h2 style="color: blue;" > This is Blue Color Show </h2>
+</ng-template>
+
+<ng-template [ngIf]="show2=='orange'">
+    <h2 style="color: orange;" > This is Orange Color Show </h2>
+</ng-template>
+
+<hr/>
+
+
+
+<h2> ngSwitch Case Multiplr colour choose one</h2>
+<div [ngSwitch]="color">
+
+    <h2 *ngSwitchCase="'red'"> This is Red Color</h2>
+    <h2 *ngSwitchCase="'Ggeen'"> This is Green Color</h2>
+    <h2 *ngSwitchCase="'blue'"> This is Blue Color</h2>
+    <h2 *ngSwitchCase="'orange'"> This is Red Color</h2>
+
+</div>
+<hr/>
+
+
+<h2> ngFor Loop Arraye 2nd type multiple value show on table</h2>
+<table style="color: royalblue; text-align: center;" border="1" >
+    <tr>
+        <td>  <b>S.  No. </b></td>
+        <td>  <b>Name </b></td>
+        <td><b> Age </b></td>
+        <td><b> Sex </b></td>
+        <td><b> Mobile </b></td>
+        <td><b> Country </b></td>
+    
+    </tr>
+        <tr *ngFor="let item of data">
+            <td>    {{item.position}}   </td>
+            <td>    {{item.name}}   </td>
+            <td>    {{item.age}}    </td>
+            <td>    {{item.sex}}    </td>
+            <td>    {{item.mobile}} </td>
+            <td>    {{item.country}} </td>
+        </tr>
+</table>
+<hr/>
+
+
+<hr/>
+<h2> Style Binding Samples</h2>
+
+<h1 style="color: red;"> Normal Style Binding</h1>
+
+<h1 [style.color]="'green'"> Style Binding</h1>
+<h1 [style.backgroundColor]="'orange'"> Style Binding backgroundColor</h1> 
+
+<h1 [style.color]="dynamiccolor"> Dynamic  Styly Bindind</h1>
+<hr/>
+
+<h2>Button Click Color Change</h2>
+<h1  [style.color]="color"> Button Click Dynamically Style Binding Text color change</h1>
+<button (click)="colorchange()" class="btn btn-primary"> Click to change color</button>
+
+
+<hr/>
+<h2> conditionally Style Bindind with Error</h2>
+
+<h1 [style.color]="err? 'red' : 'green'"> conditionally Style Bindind with Error Red and Green (err=false;)</h1>
+
+
+<hr/>
+ <!-- Bootstrap not install now -->
+
+<!-- <h2> Angular Bootstrap code through website</h2>
+<p>
+    <ngb-alert [dismissible]="false">
+      <strong>Warning!</strong> Better check yourself, you're not looking too good.
+    </ngb-alert>
+  </p> -->
+
+  <h2> Matterial Slider</h2>
+
+<mat-slider min="1" max="5" step="0.5" value="1.5"></mat-slider>
+<mat-slider vertical></mat-slider>
+
+<mat-slider invert></mat-slider>
+<mat-slider thumbLabel tickInterval="1"></mat-slider>
+<mat-slider step="4" tickInterval="3"></mat-slider>
+<mat-slider tickInterval="auto"></mat-slider>
+<hr/>
+
+

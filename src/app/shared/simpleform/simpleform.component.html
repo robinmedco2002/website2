@@ -1,0 +1,70 @@
+
+<h2> Simple Form Data show on Console</h2>
+
+<form #simpleForm="ngForm" (ngSubmit)="formSubmit(simpleForm.value)" >
+
+    <table border="0">
+        <tr bgcolor="#CCCCFF">
+         <th>Name </th>
+         <th>Value</th>
+        </tr>
+       
+        <tr>
+         <td>First Name:</td>
+         <td>
+            <input type="text" ngModel name="firstname"> 
+         </td>
+        </tr>
+
+
+        <tr>
+            <td>Last Name:</td>
+            <td>
+               <input type="text" ngModel name="lastname"> 
+            </td>
+           </tr>
+
+           <tr>
+            <td>Age:</td>
+            <td>
+               <input type="number" ngModel name="age"> 
+            </td>
+           </tr>
+
+           <tr>
+            <td>Sex:</td>
+            <td>
+                <input type="radio" ngModel name="sex" value="Male"> Male 
+                <input type="radio" ngModel name="sex" value="Female"> Female 
+            </td>
+           </tr>
+
+           <tr>
+            <td>Email:</td>
+            <td>
+               <input type="email" ngModel name="email"> 
+            </td>
+           </tr>
+
+           <tr>
+            <td>Mobile:</td>
+            <td>
+               <input type="number" ngModel name="mobile"> 
+            </td>
+           </tr>
+
+           <tr>
+            <td>Message:</td>
+            <td>
+               <input type="email" ngModel name="message"> 
+            </td>
+           </tr>
+
+    </table>
+    <button (click)="formSubmit(simpleForm.value)" class="btn  btn-primary">  Submit </button>
+   
+
+
+</form>
+
+{{simpleForm.firstname}}
