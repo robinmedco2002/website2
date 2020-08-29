@@ -9,8 +9,8 @@ export class DataServiceService {
   constructor(private http:HttpClient) { }
 
   getData()  {
-      // let url ="https://jsonplaceholder.typicode.com/todos";
-      let url ="https://corona.lmao.ninja/v3/covid-19/countries";
+      let url ="https://jsonplaceholder.typicode.com/todos";
+ 
 
       return this.http.get(url);
   }

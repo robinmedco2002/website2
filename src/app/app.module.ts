@@ -22,6 +22,9 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 
+import { DatatableService } from 'src/app/shared/data-table/datatable.service';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +37,7 @@ import { MatSortModule } from '@angular/material/sort';
     SimpleformComponent,
     TdfComponent,
     DataTableComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -49,7 +53,7 @@ import { MatSortModule } from '@angular/material/sort';
     MatSortModule
     
   ],
-  providers: [],
+  providers: [DatatableService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

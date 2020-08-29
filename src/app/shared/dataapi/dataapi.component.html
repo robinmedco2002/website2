@@ -1,38 +1,22 @@
-<p>dataapi works!</p>
+<h1 style="text-align:center;">Json Data Show (API)</h1>
 
 <table border="1" >
 
     <tr style="color: #006666; background-color:skyblue; text-align: center; text-transform: capitalize; font-weight: bold;  ">
-        <td> Country Name </td>
-        <td>Case</td>
-        <td>TodayCase</td>
-        <td>Deaths</td>
-        <td>Today Deaths</td>
-        <td>Recovered</td>
-        <td>Active</td>
-        <td>Critical</td>
-        <td>Cases / One Million</td>
-        <td>Death / One Million</td>
-        <td>Tests</td>
-        <td>Tests / One Million</td>
+        <td> ID </td>
+        <td>userID</td>
+        <td>Title</td>
+        <td>completed</td>
     </tr>
     
     <tr *ngFor="let item of data" style="color:#ffffff; background-color:#3399FF; text-transform: capitalize;   ">
-        <td> {{item.country}} </td>
-        <td>{{item.cases}}</td>
-        <td>{{item.todayCases}}</td>
-        <td>{{item.deaths}}</td>
-        <td>{{item.todayDeaths}}</td>
-        <td>{{item.recovered}}</td>
-        <td>{{item.active}}</td>
-        <td>{{item.critical}}</td>
-        <td>{{item.casesPerOneMillion}}</td>
-        <td>{{item.deathsPerOneMillion}}</td>
-        <td>{{item.tests}}</td>
-        <td>{{item.testsPerOneMillion}}</td>
-
-
+        <td> {{item.id}} </td>
+        <td>{{item.userId}}</td>
+        <td>{{item.title}}</td>
+        <td>{{item.completed}}</td>
     </tr>
+    
+    
     
     
     
